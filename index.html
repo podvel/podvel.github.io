@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f0e9">
+<meta name="description" content="Podvel is an independent post-production partner for podcasts, creators and brands.">
+<title>Podvel — Podcast & Content Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{--paper:#f3f0e9;--paper2:#e9e5dc;--ink:#191a18;--muted:#77786f;--line:#d6d1c6;--accent:#e35f3d;--accent-dark:#bd482d;--sage:#cbd2c1;--white:#fffefa;--serif:Georgia,"Times New Roman",serif;--sans:"DM Sans",Arial,sans-serif;--display:"Manrope",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}
+.topbar{height:78px;padding:0 7.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(243,240,233,.94);backdrop-filter:blur(14px);z-index:20}
+.brand{font:800 19px var(--display);letter-spacing:-.07em}.brand span{color:var(--accent)}nav{display:flex;gap:34px;color:#65665f;font-size:13px;font-weight:600}nav a:hover,.footer a:hover{color:var(--accent)}.nav-cta{border:1px solid var(--ink);padding:10px 17px;border-radius:2px;font-size:12px;font-weight:700;transition:.2s}.nav-cta:hover{background:var(--ink);color:var(--paper)}#menuToggle{display:none;background:none;border:0;font-size:23px;color:var(--ink)}
+.section{padding:100px 9%}.hero{min-height:650px;display:grid;grid-template-columns:1fr 1.05fr;gap:6%;align-items:center;padding-top:95px;padding-bottom:100px}.hero-copy{max-width:590px}.hero h1{font:800 clamp(68px,9vw,132px)/.88 var(--display);letter-spacing:-.095em;margin:0 0 34px}.hero h1 i{font:italic 400 1em var(--serif);letter-spacing:-.09em;color:var(--accent)}.hero-statement{font:500 clamp(22px,2.5vw,32px)/1.3 var(--display);letter-spacing:-.04em;margin:0 0 5px}.hero .lead{font:400 clamp(15px,1.6vw,19px)/1.5 var(--sans);color:var(--muted);margin:0}.button{display:inline-flex;align-items:center;gap:16px;background:var(--ink);color:var(--paper);padding:14px 21px;margin-top:29px;font-size:12px;font-weight:700;letter-spacing:.02em;transition:background .2s,transform .2s}.button:hover{background:var(--accent);transform:translateY(-2px)}
+.hero-art{min-width:0;position:relative;padding:30px 0}.timeline-panel{position:relative;padding:26px 26px 20px;background:#222522;color:#f4f0e7;border-radius:3px;box-shadow:18px 20px 0 var(--sage);transform:rotate(1.5deg);overflow:hidden}.timeline-top,.timeline-bottom{display:flex;justify-content:space-between;gap:12px;color:#bfc8b8;font-size:9px;letter-spacing:.14em;font-weight:700}.timeline-ruler{display:grid;grid-template-columns:repeat(6,1fr);margin:24px 0 8px 64px;color:#929a8f;font-size:9px;border-bottom:1px solid #454b44;padding-bottom:7px}.timeline-track{height:42px;display:grid;grid-template-columns:58px 1fr;gap:8px;align-items:center;border-bottom:1px solid #3b413a}.timeline-track>b{color:#b8c0b3;font-size:9px;letter-spacing:.1em}.track-lanes{height:25px;display:flex;gap:4px;overflow:hidden}.clip{display:block;height:100%;border-radius:2px;min-width:12%;background:#d56c4b;border:1px solid #e48a6e}.clip-a{flex:1.15}.clip-b{flex:.85;background:#718b79;border-color:#8da795}.clip-c{flex:1.3;background:#b4a27a;border-color:#c6b58d}.clip-d{flex:.75;background:#71818b;border-color:#879ba6}.audio-wave{height:23px;background:repeating-linear-gradient(90deg,transparent 0 3px,#8fa98f 4px 5px,transparent 6px 9px);mask-image:linear-gradient(0deg,transparent,#000 25%,#000 75%,transparent)}.timeline-playhead{position:absolute;top:75px;bottom:45px;left:61%;width:1px;background:#ef7857;animation:playhead 7s linear infinite}.timeline-playhead span{position:absolute;top:0;left:-4px;width:9px;height:9px;background:#ef7857;border-radius:50%}@keyframes playhead{0%{left:20%}100%{left:88%}}.timeline-bottom{margin-top:19px;color:#d7d6cb}
+.trust{text-align:center;border-block:1px solid var(--line);padding-top:58px;padding-bottom:66px}.eyebrow,section>small,.section small,.heading>div>small{font-size:10px;letter-spacing:.19em;color:var(--accent);font-weight:800}.trust h2{font:600 clamp(27px,3vw,39px)/1.2 var(--display);letter-spacing:-.06em;margin:12px 0}.trust h2 span{font:italic 400 1em var(--serif);color:var(--muted)}.clients{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:center;gap:13px;margin-top:37px}.client-logo{height:74px;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(255,254,250,.62);border:1px solid var(--line);border-radius:2px;transition:.2s}.client-logo:hover{border-color:#a8a99d;transform:translateY(-3px)}.client-logo img{max-width:100%;max-height:48px;object-fit:contain;filter:none;opacity:1}.client-logo img:hover{filter:none;opacity:1}
+.heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:57px}.heading h2,h2{font:700 clamp(42px,5.3vw,70px)/1.02 var(--display);letter-spacing:-.075em;margin:13px 0 0}.heading h2 em,h2 em{font:italic 400 1em var(--serif);color:var(--accent)}.heading>p{color:var(--muted);max-width:330px;font-size:13px;line-height:1.8;margin:0}.work{margin:0 0 72px}.rowhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:22px}.rowhead h3{font:650 22px var(--display);letter-spacing:-.04em;margin:0}.rowhead small{font-size:9px;color:#929187;letter-spacing:.12em}.desc{color:var(--muted);max-width:620px;margin:-4px 0 23px;font-size:14px}.grid{display:grid;gap:17px}.grid.three{grid-template-columns:repeat(3,1fr)}#shortsGrid{align-items:start}.grid.two{grid-template-columns:repeat(2,1fr)}
+.video-card{position:relative;aspect-ratio:16/9;min-width:0;background:#20221f;border:1px solid #d0ccc2;border-radius:2px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}.video-card.vertical{aspect-ratio:16/9}.video-card video,.video-card iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}.video-card video{object-fit:contain;background:#171917}.video-card iframe{background:#171917}.video-card.short-card{background:#171917;aspect-ratio:9/16;width:100%;max-width:280px;margin-inline:auto}.video-card.short-card video{object-fit:contain}.placeholder-top,.placeholder-bottom{position:relative;z-index:0;display:flex;justify-content:space-between;padding:17px}.placeholder-bottom{margin-top:auto}.placeholder-top{font-size:9px;letter-spacing:.16em;color:#d2baff}.play{width:42px;height:42px;border:1px solid #ddd;border-radius:50%;display:grid;place-items:center;margin-left:auto}.placeholder-title{font:700 22px/1.15 var(--display);max-width:80%}.placeholder-note{font-size:9px;color:#aaa;letter-spacing:.13em;margin-top:8px}.comparison-label{position:absolute;z-index:5;top:13px;left:13px;padding:7px 11px;background:var(--paper);color:var(--ink);font:800 9px var(--sans);letter-spacing:.15em}.comparison-label.after{background:var(--accent);color:white}.video-label{position:absolute;z-index:2;bottom:12px;left:12px;background:#09090dcc;padding:5px 9px;border-radius:20px;font-size:9px;letter-spacing:.1em}
+.services{background:#e8e5dc;border-block:1px solid var(--line)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}.service-grid article{padding:23px 22px;background:var(--paper);border:1px solid var(--line);border-radius:2px;min-height:210px;transition:.2s}.service-grid article:hover{background:var(--white);transform:translateY(-4px)}.service-grid small{color:var(--accent)}.service-grid h3{font:650 17px var(--display);letter-spacing:-.035em;margin:36px 0 8px}.service-grid p{font-size:12px;color:var(--muted);line-height:1.7}
+.testimonials{text-align:center}.testimonials>h2{margin:0}.quotes{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:45px;text-align:left}.quotes blockquote{margin:0;padding:29px;background:var(--white);border:1px solid var(--line);border-radius:2px}.quotes blockquote>b{font:60px var(--serif);color:var(--accent);line-height:.8}.quotes p{color:#55564f;line-height:1.8;min-height:115px;font-size:14px}.quotes footer{display:flex;flex-direction:column;font-size:12px}.quotes footer span{color:var(--muted);font-size:10px}
+.about{display:block;background:#e8e5dc;border-block:1px solid var(--line)}.about-copy{max-width:900px;margin:0 auto;color:#65665f;font-size:17px;line-height:1.85}.about-copy h2{font-size:clamp(40px,4vw,55px);margin:13px 0 25px}.about-copy .intro{font-size:23px;line-height:1.55;color:var(--ink)}.about-copy p{margin:0 0 22px}.about-copy strong{color:var(--ink)}
+.contact{display:block}.contact-message{max-width:1000px}.contact-message>small{display:block;margin-bottom:22px}.contact-copy{max-width:950px;color:var(--ink);font:500 clamp(22px,2.6vw,35px)/1.48 var(--display);letter-spacing:-.04em;margin:0}.contact-message .button{margin-top:28px}
+.footer{border-top:1px solid var(--line);padding:24px 9%;display:flex;justify-content:space-between;align-items:center;color:#85857c;font-size:10px}.footer .brand{color:var(--ink)}.footer a:last-child{color:var(--accent);font-weight:700}
+.custom-video-controls{position:absolute;z-index:4;left:0;right:0;bottom:0;min-height:58px;display:flex;align-items:center;gap:13px;padding:22px 15px 12px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.88));opacity:1}.custom-video-controls button{appearance:none;border:0;background:transparent;color:#fff;min-width:38px;min-height:38px;padding:5px;display:inline-flex;align-items:center;justify-content:center;font:700 25px/1 Arial,sans-serif;cursor:pointer;border-radius:7px}.custom-video-controls button:hover,.custom-video-controls button:focus-visible{background:rgba(255,255,255,.18);outline:1px solid rgba(255,255,255,.75)}.custom-video-controls .control-spacer{flex:1}.custom-video-controls input[type=range]{width:82px;accent-color:#fff;cursor:pointer}
+@media(max-width:900px){.section{padding:78px 6%}.topbar{padding:0 6%}.hero{grid-template-columns:1fr 1fr;gap:4%}.hero h1{font-size:clamp(62px,9vw,95px)}.clients{grid-template-columns:repeat(4,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.topbar{height:68px}.topbar nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);padding:22px 6%;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}nav.open{display:flex}#menuToggle{display:block}.nav-cta{margin-left:auto;margin-right:16px}.hero{grid-template-columns:1fr;min-height:auto;padding-top:75px;gap:30px}.hero h1{font-size:clamp(70px,17vw,110px)}.hero-art{padding:15px 0 25px}.timeline-panel{padding:20px 16px 16px;box-shadow:9px 10px 0 var(--sage)}.timeline-top,.timeline-bottom{font-size:7px}.timeline-ruler{margin-left:52px;font-size:7px}.timeline-track{grid-template-columns:46px 1fr;height:35px}.heading{align-items:flex-start;flex-direction:column;margin-bottom:38px}.heading>p{max-width:520px}.grid.three,.grid.two{grid-template-columns:1fr}.video-card.short-card{width:min(100%,360px);max-width:360px;aspect-ratio:9/16;margin-inline:auto}.service-grid{grid-template-columns:1fr 1fr}.about-copy{font-size:16px}.about-copy .intro{font-size:20px}.quotes{grid-template-columns:1fr}.quotes p{min-height:0}.contact-copy{font-size:23px}.footer{padding:22px 6%;gap:12px;flex-wrap:wrap}.footer>span{width:100%;order:3}}
+@media(max-width:430px){.nav-cta{display:none}.service-grid{grid-template-columns:1fr}.clients{grid-template-columns:repeat(2,1fr)}.rowhead h3{font-size:19px}.trust h2{font-size:29px}.timeline-panel{padding:17px 12px 14px}.timeline-top span:last-child,.timeline-bottom span:last-child{display:none}.timeline-ruler{margin-left:45px}.timeline-track{grid-template-columns:39px 1fr}}
+
+
+
+.about-heading{display:flex;align-items:center;gap:20px;margin-bottom:22px}.about-heading h2{margin:7px 0 0}.about-avatar{width:76px;height:76px;flex:0 0 76px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);outline:1px solid var(--line);background:var(--paper2)}.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.contact-actions .button{margin-top:0}.whatsapp-button{background:#26764b}.whatsapp-button:hover{background:#1c603b}.linkedin-button{background:#245b86}.linkedin-button:hover{background:#17466b}.contact-email,.contact-phone{font-size:13px;color:var(--muted);margin:18px 0 0}.contact-email a,.contact-phone a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}.contact-phone{margin-top:5px}
+@media(max-width:700px){.about-heading{gap:15px}.about-avatar{width:64px;height:64px;flex-basis:64px}.contact-actions{gap:9px}.contact-actions .button{padding:13px 15px}}
+
+
+/* Light / dark appearance switch */
+.theme-toggle{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:21px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s;margin-left:12px}
+.theme-toggle:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:rotate(-8deg)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:700px){.theme-toggle{margin-left:auto;margin-right:10px;width:38px;height:38px}.topbar{gap:8px}}
+html[data-theme="dark"]{color-scheme:dark;--paper:#171916;--paper2:#20251f;--ink:#f0eee7;--muted:#aaa99f;--line:#393d35;--sage:#30392f;--white:#22251f}
+html[data-theme="dark"] body{background:var(--paper);color:var(--ink)}
+html[data-theme="dark"] .topbar{background:rgba(23,25,22,.94);border-color:var(--line)}
+html[data-theme="dark"] nav{color:#c0c1b7}
+html[data-theme="dark"] .nav-cta{border-color:#777b70}
+html[data-theme="dark"] .nav-cta:hover{background:var(--ink);color:var(--paper)}
+html[data-theme="dark"] .trust{border-color:var(--line)}
+html[data-theme="dark"] .trust h2 span{color:#aaa99f}
+html[data-theme="dark"] .client-logo{background:#20231e;border-color:var(--line)}
+html[data-theme="dark"] .rowhead{border-color:var(--line)}
+html[data-theme="dark"] .rowhead small{color:#aaa99f}
+html[data-theme="dark"] .video-card{border-color:#45483f}
+html[data-theme="dark"] .services,html[data-theme="dark"] .about{background:#20231e;border-color:var(--line)}
+html[data-theme="dark"] .service-grid article{background:#191c18;border-color:#3b4037}
+html[data-theme="dark"] .service-grid article:hover{background:#252a23}
+html[data-theme="dark"] .service-grid p{color:#aaa99f}
+html[data-theme="dark"] .quotes blockquote{background:#20231e;border-color:var(--line)}
+html[data-theme="dark"] .quotes p{color:#d1d0c8}
+html[data-theme="dark"] .quotes footer span{color:#aaa99f}
+html[data-theme="dark"] .about-copy{color:#c0c0b6}
+html[data-theme="dark"] .about-copy .intro,html[data-theme="dark"] .about-copy strong{color:var(--ink)}
+html[data-theme="dark"] .about-avatar{border-color:var(--paper);outline-color:var(--line);background:var(--paper2)}
+html[data-theme="dark"] .contact-copy{color:var(--ink)}
+html[data-theme="dark"] .contact-email,html[data-theme="dark"] .contact-phone{color:#aaa99f}
+html[data-theme="dark"] .contact-email a,html[data-theme="dark"] .contact-phone a{color:var(--ink)}
+html[data-theme="dark"] .footer{border-color:var(--line);color:#aaa99f}
+html[data-theme="dark"] .footer .brand{color:var(--ink)}
+html[data-theme="dark"] .footer a:last-child{color:#f08061}
+html[data-theme="dark"] .topbar nav.open{background:var(--paper);border-color:var(--line)}
+html[data-theme="dark"] .button{background:#f0eee7;color:#191a18}
+html[data-theme="dark"] .button:hover{background:var(--accent);color:#fff}
+html[data-theme="dark"] .whatsapp-button{background:#26764b;color:#fff}
+html[data-theme="dark"] .linkedin-button{background:#245b86;color:#fff}
+html[data-theme="dark"] .theme-toggle{border-color:#555a50}
+html[data-theme="dark"] .theme-toggle:hover{background:#f0eee7;color:#191a18;border-color:#f0eee7}
+
+
+/* Header alignment: centered navigation, grouped actions on the right */
+@media(min-width:701px){
+  .topbar{position:sticky;display:flex;justify-content:space-between}
+  .topbar>.brand{position:relative;z-index:2}
+  .topbar>nav#nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;white-space:nowrap}
+  .topbar>.nav-cta{position:absolute;right:calc(7.5% + 54px);top:50%;transform:translateY(-50%);margin:0;white-space:nowrap}
+  .topbar>.theme-toggle{position:absolute;right:7.5%;top:50%;transform:translateY(-50%);margin:0}
+  .topbar>.theme-toggle:hover{transform:translateY(-50%) rotate(-8deg)}
+}
+@media(min-width:701px) and (max-width:900px){
+  .topbar{padding:0 5%}
+  .topbar>.nav-cta{right:calc(5% + 50px)}
+  .topbar>.theme-toggle{right:5%}
+  .topbar>nav#nav{gap:22px}
+}
+
+
+/* Client marks: keep original colours and reveal names on hover/focus */
+.client-logo{position:relative;overflow:hidden;cursor:pointer;transform:translateY(0);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.client-logo img{filter:none!important;opacity:1!important;transform:scale(1);transition:transform .28s ease}
+.client-logo:hover,.client-logo:focus-visible,.client-logo.show-name{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 22px rgba(25,26,24,.09)}
+.client-logo:hover img,.client-logo:focus-visible img,.client-logo.show-name img{transform:scale(1.07)}
+.client-logo::after{content:attr(data-name);position:absolute;left:7px;right:7px;bottom:6px;padding:5px 7px;background:rgba(25,26,24,.9);color:#fffefa;font:700 9px/1.2 var(--sans);letter-spacing:.04em;text-align:center;opacity:0;transform:translateY(5px);transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+.client-logo:hover::after,.client-logo:focus-visible::after,.client-logo.show-name::after{opacity:1;transform:translateY(0)}
+/* Keep the repurposing description on one line on desktop */
+#work .desc{max-width:none;white-space:nowrap}
+.timeline-panel{touch-action:pan-y;cursor:crosshair}
+.timeline-playhead{animation:none;left:20%;will-change:left}
+.timeline-timecode{color:#ef7857!important;font-variant-numeric:tabular-nums;min-width:75px;text-align:center}
+.timeline-panel.is-scrubbing .timeline-playhead{animation:none}
+.timeline-track .track-lanes,.timeline-track .audio-wave{transition:filter .2s ease}
+.timeline-panel:hover .timeline-track .track-lanes,.timeline-panel:hover .timeline-track .audio-wave{filter:brightness(1.13)}
+@media(max-width:700px){#work .desc{white-space:normal}#shortsGrid{align-items:start}.video-card.short-card{width:min(100%,360px);max-width:360px;aspect-ratio:9/16}}
+
+</style></head><body>
+<header class="topbar"><a class="brand" href="#home">PODVEL<span>.</span></a>
+<nav id="nav"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="nav-cta" href="#contact">Let's talk ↗</a><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme"><span class="theme-icon" aria-hidden="true">☾</span></button><button id="menuToggle" aria-label="Menu">☰</button></header>
+<main>
+<section class="hero section" id="home">
+  <div class="hero-copy">
+    
+    <h1>AT <i>Podvel</i></h1>
+    <p class="hero-statement">We are your partner in</p>
+    <p class="lead">AI Content, Ads, Podcast, YouTube &amp; More</p>
+    <a class="button" href="#work">View portfolio ↓</a>
+  </div>
+  <div class="hero-art" aria-label="Animated multicamera podcast editing timeline">
+    <div class="timeline-panel">
+      <div class="timeline-top"><span>PODVEL / POST-PRODUCTION</span><span class="timeline-timecode" id="timelineTimecode">00:15:00</span><span>MULTICAM SEQUENCE 01</span></div>
+      <div class="timeline-ruler"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span><span>01:15</span></div>
+      <div class="timeline-track"><b>CAM 01</b><div class="track-lanes"><i class="clip clip-a"></i><i class="clip clip-b"></i><i class="clip clip-c"></i><i class="clip clip-d"></i></div></div>
+      <div class="timeline-track"><b>CAM 02</b><div class="track-lanes"><i class="clip clip-b"></i><i class="clip clip-c"></i><i class="clip clip-a"></i><i class="clip clip-d"></i></div></div>
+      <div class="timeline-track"><b>CAM 03</b><div class="track-lanes"><i class="clip clip-c"></i><i class="clip clip-a"></i><i class="clip clip-d"></i><i class="clip clip-b"></i></div></div>
+      <div class="timeline-track audio-track"><b>AUDIO</b><div class="audio-wave"></div></div>
+      <div class="timeline-playhead"><span></span></div>
+      <div class="timeline-bottom"><span>● MULTICAM EDIT</span><span>SYNCED AUDIO · CUTS · STORY</span></div>
+    </div>
+  </div>
+</section>
+<section class="trust section"><small>GOOD WORK TRAVELS</small><h2>Trusted by <span>creators & brands</span></h2>
+<div class="clients" id="clientsGrid"></div></section>
+<section class="section" id="work"><div class="heading"><div><small>A FEW THINGS WE'VE MADE</small><h2>Selected <em>work.</em></h2></div><p>From scroll-stopping shorts to complete podcast productions, here's a look at what we do.</p></div>
+<div class="work"><div class="rowhead"><h3>Reels / Shorts</h3><small>01 — SHORT FORM</small></div><div class="grid three" id="shortsGrid"></div></div>
+<div class="work"><div class="rowhead"><h3>Podcast Trailers</h3><small>02 — TRAILERS</small></div><div class="grid two" id="precapsGrid"></div></div>
+<div class="work"><div class="rowhead"><h3>Podcast Repurposing</h3><small>03 — CONTENT REPURPOSING</small></div><p class="desc">We turn long podcasts into engaging reels with strong hooks, clean cuts, and polished audio-video.</p><div class="grid two" id="repurposeGrid"></div></div>
+<div class="work"><div class="rowhead"><h3>Podcast Edits</h3><small>04 — FULL EPISODES</small></div><p class="desc">Full-length podcast episodes, embedded directly from YouTube.</p><div class="grid two" id="podcastGrid"></div></div></section>
+<section class="section services" id="services"><div class="heading"><div><small>WHAT WE BRING TO THE TABLE</small><h2>More than just <em>editing.</em></h2></div><p>End-to-end content support, built around the way modern creators publish.</p></div>
+<div class="service-grid"><article><small>01</small><h3>Podcast Production</h3><p>Multi-camera editing, clean audio-video, episode finishing and delivery.</p></article><article><small>02</small><h3>Short-form Editing</h3><p>Reels and Shorts shaped with strong pacing, captions and platform-ready framing.</p></article><article><small>03</small><h3>Content Repurposing</h3><p>Turn long-form conversations into multiple pieces of content for every platform.</p></article><article><small>04</small><h3>Content Support</h3><p>Content consulting, title ideas, thumbnail suggestions and creative direction.</p></article></div></section>
+<section class="section testimonials"><h2>Client <em>feedback.</em></h2><div class="quotes">
+<blockquote><b>“</b><p>Suraj is an exceptional video editor, always incredibly responsive and accommodating even with last-minute requests, consistently delivering high-quality work exactly as envisioned. I am so grateful to have him producing our Gen She Podcast.</p><footer><strong>Avni Barman</strong><span>Founder of Gen She</span></footer></blockquote>
+<blockquote><b>“</b><p>Suraj is the most hardworking editor I have worked with. Super cooperative and polite. He has never sacrificed the quality in any video. Happy working with him.</p><footer><strong>Vansh Gujral</strong><span>Content Strategist at TRS Clips</span></footer></blockquote></div></section>
+<section class="section about" id="about"><div class="about-copy"><div class="about-heading"><img class="about-avatar" id="aboutPhoto" src="assets/images/my%20face.png" alt="Suraj Badgujar"><div><small>THE PERSON BEHIND THE TIMELINE</small><h2>A little about <em>me.</em></h2></div></div><p class="intro">I’m Suraj Badgujar, a full-time freelance editor with 4+ years of experience in production and editing. I specialise in podcasts, and I’m building Podvel, a small podcast editing and post-production setup.</p><p>I’ve worked with AI Ankit, Gen She Pod, Sushasan Podcast, TIGP, The Bookholics and more. My earlier background as an Internet Researcher gives me a good understanding of audience behaviour and storytelling, which I bring into every edit.</p></div></section>
+<section class="section contact" id="contact">
+  <div class="contact-message">
+    <small>HAVE A PROJECT IN MIND?</small>
+    <p class="contact-copy">If you’re looking for someone to handle your podcast editing and post-production, please contact us for more details. Send us an episode or a rough cut and let’s chat.</p>
+    <div class="contact-actions">
+      <a class="button" id="emailLink" href="mailto:surajbgujar@gmail.com">Email us ↗</a>
+      <a class="button whatsapp-button" href="https://wa.me/918779080800?text=Hi%20Podvel%2C%20I%27m%20interested%20in%20your%20podcast%20editing%20services." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+      <a class="button linkedin-button" href="https://www.linkedin.com/in/surajbgujar/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+    <p class="contact-email">Or write directly to <a href="mailto:surajbgujar@gmail.com">surajbgujar@gmail.com</a></p>
+    <p class="contact-phone">WhatsApp: <a href="https://wa.me/918779080800" target="_blank" rel="noopener noreferrer">+91 87790 80800</a></p>
+  </div>
+</section>
+</main><footer class="footer"><a class="brand" href="#home">PODVEL<span>.</span></a><span>© <i id="year"></i> Podvel Productions. All rights reserved.</span><a href="#home">Back to top ↑</a></footer>
+<script>
+// Podvel portfolio media mapping. Keep filenames in assets/videos and assets/images matching these paths.
+window.PODVEL_PROJECTS = {
+  shorts: [
+    {title:"Short-form edit 01", video:"assets/videos/reel%201.mp4", orientation:"vertical"},
+    {title:"Short-form edit 02", video:"assets/videos/reel%202.mp4", orientation:"vertical"},
+    {title:"Short-form edit 03", video:"assets/videos/reel%203.mp4", orientation:"vertical"},
+    {title:"Short-form edit 04", video:"assets/videos/reel%204.mp4", orientation:"vertical"},
+    {title:"Short-form edit 05", video:"assets/videos/reel%205.mp4", orientation:"vertical"},
+    {title:"Short-form edit 06", video:"assets/videos/reel%206.mp4", orientation:"vertical"}
+  ],
+  precaps: [
+    {title:"Podcast Precap 01", video:"assets/videos/podcast%20trailer%201.mp4", orientation:"horizontal"},
+    {title:"Podcast Precap 02", video:"assets/videos/podcast%20trailer%202.mp4", orientation:"horizontal"},
+  ],
+  repurpose: [
+    {title:"Podcast Repurposing 01", label:"BEFORE", video:"assets/videos/podcast%20before.mp4", orientation:"horizontal"},
+    {title:"Podcast Repurposing 02", label:"AFTER", video:"assets/videos/podcast%20after.mp4", orientation:"vertical"}
+  ],
+  podcasts: [
+    {title:"Full Podcast Episode 01", youtube:"https://youtu.be/aPcA7BgGhT0"},
+    {title:"Full Podcast Episode 02", youtube:"https://youtu.be/yUCfnrkqLU4"},
+    {title:"Full Podcast Episode 03", youtube:"https://youtu.be/YHU7NVFrpI4"},
+    {title:"Full Podcast Episode 04", youtube:"https://youtu.be/IDDA-mjgO1M"}
+  ],
+  clients: [
+    {name:"AI Ankit", image:"assets/images/ai%20ankit.jpg"},
+    {name:"Gen She", image:"assets/images/gen%20she.jpg"},
+    {name:"Sushasan Podcast", image:"assets/images/sushasan.jpg"},
+    {name:"TIGP", image:"assets/images/tigp.jpg"},
+    {name:"The Bookholics", image:"assets/images/bookholics.jpg"},
+    {name:"The Daily Lawyer", image:"assets/images/the%20daily%20lawyer.jpg"},
+    {name:"The Neon Show", image:"assets/images/neon%20show.jpg"}
+  ],
+  aboutImage: "assets/images/my%20face.png",
+  email: "surajbgujar@gmail.com"
+};
+
+</script>
+<script>
+(function () {
+  const root = document.documentElement;
+  const themeButton = document.getElementById("themeToggle");
+  const themeIcon = themeButton && themeButton.querySelector(".theme-icon");
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem("podvel-theme"); } catch (error) {}
+
+  function applyTheme(theme) {
+    const dark = theme === "dark";
+    root.setAttribute("data-theme", dark ? "dark" : "light");
+    if (themeIcon) themeIcon.textContent = dark ? "☀" : "☾";
+    if (themeButton) {
+      themeButton.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      themeButton.setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.setAttribute("content", dark ? "#171916" : "#f3f0e9");
+  }
+
+  applyTheme(savedTheme === "dark" ? "dark" : "light");
+  if (themeButton) {
+    themeButton.addEventListener("click", function () {
+      const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      try { localStorage.setItem("podvel-theme", nextTheme); } catch (error) {}
+    });
+  }
+
+  const d = window.PODVEL_PROJECTS || {};
+
+  function youtubeEmbed(url) {
+    try {
+      const parsed = new URL(url);
+      const id = parsed.hostname.includes("youtu.be")
+        ? parsed.pathname.slice(1)
+        : parsed.searchParams.get("v") || parsed.pathname.split("/embed/")[1];
+      if (!id) return url;
+      const origin = window.location.origin && window.location.origin !== "null"
+        ? "&origin=" + encodeURIComponent(window.location.origin)
+        : "";
+      return "https://www.youtube.com/embed/" + id + "?rel=0&playsinline=1" + origin;
+    } catch (error) {
+      return url;
+    }
+  }
+
+  function makeVideoControls(video, isShort) {
+    const controls = document.createElement("div");
+    controls.className = "custom-video-controls";
+
+    const playButton = document.createElement("button");
+    playButton.type = "button";
+    playButton.className = "play-toggle";
+    playButton.setAttribute("aria-label", "Play video");
+    playButton.textContent = "▶";
+
+    const spacer = document.createElement("span");
+    spacer.className = "control-spacer";
+
+    const volumeButton = document.createElement("button");
+    volumeButton.type = "button";
+    volumeButton.className = "volume-icon";
+    volumeButton.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
+    volumeButton.textContent = video.muted ? "🔇" : "🔊";
+
+    const volume = document.createElement("input");
+    volume.type = "range";
+    volume.min = "0";
+    volume.max = "1";
+    volume.step = "0.05";
+    volume.value = video.muted ? "0" : String(video.volume);
+    volume.setAttribute("aria-label", "Video volume");
+
+    function syncPlayButton() {
+      const playing = !video.paused && !video.ended;
+      playButton.textContent = playing ? "Ⅱ" : "▶";
+      playButton.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+    }
+
+    function syncVolume() {
+      volumeButton.textContent = video.muted || video.volume === 0 ? "🔇" : "🔊";
+      volumeButton.setAttribute(
+        "aria-label",
+        video.muted || video.volume === 0 ? "Unmute video" : "Mute video"
+      );
+      volume.value = video.muted ? "0" : String(video.volume);
+    }
+
+    function togglePlayback() {
+      if (video.paused || video.ended) {
+        const result = video.play();
+        if (result && typeof result.catch === "function") result.catch(() => {});
+      } else {
+        video.pause();
+      }
+    }
+
+    playButton.addEventListener("click", event => {
+      event.stopPropagation();
+      togglePlayback();
+    });
+
+    volumeButton.addEventListener("click", event => {
+      event.stopPropagation();
+      if (video.muted || video.volume === 0) {
+        video.muted = false;
+        video.volume = 0.7;
+      } else {
+        video.muted = true;
+      }
+      syncVolume();
+    });
+
+    volume.addEventListener("input", event => {
+      event.stopPropagation();
+      video.volume = Number(volume.value);
+      video.muted = video.volume === 0;
+      syncVolume();
+    });
+
+    controls.addEventListener("click", event => event.stopPropagation());
+    video.addEventListener("click", togglePlayback);
+    video.addEventListener("play", syncPlayButton);
+    video.addEventListener("pause", syncPlayButton);
+    video.addEventListener("ended", syncPlayButton);
+    video.addEventListener("volumechange", syncVolume);
+
+    controls.append(playButton, spacer, volumeButton, volume);
+    syncPlayButton();
+    syncVolume();
+    return controls;
+  }
+
+  function card(item, index, type) {
+    const el = document.createElement("article");
+    const isShort = type === "short";
+    const isVertical = item.orientation === "vertical" || isShort;
+    el.className = "video-card" +
+      (isVertical ? " vertical" : "") +
+      (isShort ? " short-card" : " contained-card");
+
+    if (item.label) {
+      const label = document.createElement("span");
+      label.className = "comparison-label " + item.label.toLowerCase();
+      label.textContent = item.label;
+      el.append(label);
+    }
+
+    if (item.video) {
+      const video = document.createElement("video");
+      video.src = item.video;
+      video.preload = "metadata";
+      video.playsInline = true;
+      video.loop = true;
+      video.controls = false;
+      video.setAttribute("controlslist", "nofullscreen noremoteplayback");
+      video.disablePictureInPicture = true;
+      if (item.poster) video.poster = item.poster;
+
+      if (isShort) {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.autoplay = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("autoplay", "");
+        video.addEventListener("canplay", () => {
+          const playPromise = video.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
+        }, { once: true });
+      }
+
+      el.append(video);
+      el.append(makeVideoControls(video, isShort));
+    } else if (item.youtube) {
+      const frame = document.createElement("iframe");
+      frame.title = item.title;
+      frame.loading = "lazy";
+      // Set referrer policy before assigning src so YouTube receives the page origin.
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.allowFullscreen = true;
+      frame.src = youtubeEmbed(item.youtube);
+      el.append(frame);
+    } else {
+      const top = document.createElement("div");
+      top.className = "placeholder-top";
+      top.innerHTML = '<span>PODVEL / ' + String(index + 1).padStart(2, "0") + '</span><span class="play">▶</span>';
+      const bottom = document.createElement("div");
+      bottom.innerHTML = '<div class="placeholder-title"></div><div class="placeholder-note">VIDEO PREVIEW WILL APPEAR HERE</div>';
+      bottom.querySelector(".placeholder-title").textContent = item.title;
+      el.append(top, bottom);
+    }
+
+    return el;
+  }
+
+  function fill(id, items, type) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    (items || []).forEach((item, index) => target.append(card(item, index, type)));
+  }
+
+  fill("shortsGrid", d.shorts, "short");
+  fill("precapsGrid", d.precaps, "precap");
+  fill("repurposeGrid", d.repurpose, "repurpose");
+  fill("podcastGrid", d.podcasts, "podcast");
+
+  const clients = document.getElementById("clientsGrid");
+  (d.clients || []).forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "client-logo";
+    wrap.setAttribute("tabindex", "0");
+    wrap.setAttribute("aria-label", item.name);
+    wrap.setAttribute("data-name", item.name);
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name;
+    img.loading = "lazy";
+    wrap.append(img);
+    clients.append(wrap);
+
+    wrap.addEventListener("click", () => wrap.classList.toggle("show-name"));
+    wrap.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        wrap.classList.toggle("show-name");
+      }
+    });
+  });
+
+  // Interactive editing timeline: auto-play the playhead, scrub with pointer/touch.
+  const timeline = document.querySelector(".timeline-panel");
+  const playhead = timeline && timeline.querySelector(".timeline-playhead");
+  const timecode = document.getElementById("timelineTimecode");
+  if (timeline && playhead) {
+    let progress = 0.2;
+    let direction = 1;
+    let lastFrame = 0;
+    let scrubbing = false;
+    let pointerDown = false;
+    const minProgress = 0;
+    const maxProgress = 1;
+    const durationSeconds = 75;
+
+    const timelineLane = timeline.querySelector(".track-lanes");
+
+    function showProgress(value) {
+      progress = Math.max(minProgress, Math.min(maxProgress, value));
+
+      // Align the playhead with the actual clip lane, not the whole panel.
+      if (timelineLane) {
+        const panelRect = timeline.getBoundingClientRect();
+        const laneRect = timelineLane.getBoundingClientRect();
+        const laneStart = laneRect.left - panelRect.left;
+        playhead.style.left = (laneStart + progress * laneRect.width) + "px";
+      }
+
+      if (timecode) {
+        const total = Math.round(((progress - minProgress) / (maxProgress - minProgress)) * durationSeconds);
+        const minutes = String(Math.floor(total / 60)).padStart(2, "0");
+        const seconds = String(total % 60).padStart(2, "0");
+        timecode.textContent = minutes + ":" + seconds + ":00";
+      }
+    }
+
+    function scrubAt(clientX) {
+      if (!timelineLane) return;
+      const rect = timelineLane.getBoundingClientRect();
+      showProgress((clientX - rect.left) / rect.width);
+    }
+
+    function animate(timestamp) {
+      if (!lastFrame) lastFrame = timestamp;
+      const delta = Math.min((timestamp - lastFrame) / 1000, 0.05);
+      lastFrame = timestamp;
+      if (!scrubbing) {
+        progress += direction * delta * 0.075;
+        if (progress >= maxProgress) { progress = maxProgress; direction = -1; }
+        if (progress <= minProgress) { progress = minProgress; direction = 1; }
+        showProgress(progress);
+      }
+      window.requestAnimationFrame(animate);
+    }
+
+    timeline.addEventListener("pointerenter", event => {
+      if (event.pointerType === "mouse") scrubbing = true;
+    });
+    timeline.addEventListener("pointermove", event => {
+      if (event.pointerType === "mouse" || pointerDown) {
+        scrubbing = true;
+        scrubAt(event.clientX);
+      }
+    });
+    timeline.addEventListener("pointerdown", event => {
+      pointerDown = true;
+      scrubbing = true;
+      scrubAt(event.clientX);
+      if (timeline.setPointerCapture) timeline.setPointerCapture(event.pointerId);
+    });
+    timeline.addEventListener("pointerup", () => {
+      pointerDown = false;
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        scrubbing = true;
+      } else {
+        scrubbing = false;
+      }
+    });
+    timeline.addEventListener("pointercancel", () => {
+      pointerDown = false;
+      scrubbing = false;
+    });
+    timeline.addEventListener("pointerleave", event => {
+      if (event.pointerType === "mouse" && !pointerDown) scrubbing = false;
+    });
+    showProgress(progress);
+    window.requestAnimationFrame(animate);
+  }
+
+  const about = document.getElementById("aboutPhoto");
+  if (about && d.aboutImage) about.src = d.aboutImage;
+
+  const emailLink = document.getElementById("emailLink");
+  if (emailLink && d.email && !d.email.includes("YOUR_EMAIL")) {
+    emailLink.href = "mailto:" + d.email;
+  }
+
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => nav.classList.toggle("open"));
+    nav.querySelectorAll("a").forEach(link =>
+      link.addEventListener("click", () => nav.classList.remove("open"))
+    );
+  }
+})();
+</script></body></html>
